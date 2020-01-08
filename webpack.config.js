@@ -1,39 +1,37 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+const sass = require('node-sass');
 
 module.exports = {
   entry: {
-    app: './src/javascript/index.js',
+    main: './src/javascript/index.js',
     pdp: './src/components/pages/detail/Detail.jsx',
-    plp: './src/components/pages/listing/Listing.jsx'
+    cdn: './src/javascript/cdn.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js'
+    filename: 'javascripts/[name].js'
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      cacheGroups: {
-        styles: {
-          name: 'styles',
-          test: /\.css$/,
-          chunks: 'all',
-          enforce: true
-        }
-      }
-    }
-  },
+  optimization: {},
   plugins: [
     new HtmlWebpackPlugin({ template: './src/static/index.html' }),
-    new HtmlWebpackPlugin({ filename: 'pdp.html' }),
-    new HtmlWebpackPlugin({ filename: 'plp.html' }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
-    }),
+    new MiniCssExtractPlugin({ filename: 'stylesheet-new/[name].css' }),
+    new CopyPlugin([{ from: 'src/static', to: '' }]),
+    new CopyPlugin([
+      {
+        from: 'src/stylesheets/*.scss',
+        to: './stylesheets/[name].css',
+        transform(content, path) {
+          const result = sass.renderSync({
+            file: path
+          });
+          return result.css.toString();
+        }
+      }
+    ]),
     new CleanWebpackPlugin()
   ],
   module: {
@@ -56,4 +54,4 @@ module.exports = {
       }
     ]
   }
-}
+};

@@ -1,3 +1,5 @@
+@import './settings/colors';
+
 body {
-  background: green;
+  background: map-get($colors, white);
 }
