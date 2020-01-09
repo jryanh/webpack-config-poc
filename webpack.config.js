@@ -8,7 +8,6 @@ const sass = require('node-sass');
 module.exports = {
   entry: {
     main: './src/javascript/index.js',
-    pdp: './src/components/pages/detail/Detail.jsx',
     cdn: './src/javascript/cdn.js'
   },
   output: {

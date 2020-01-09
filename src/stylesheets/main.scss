@@ -1,5 +1,7 @@
 @import './settings/colors';
 
+@import '../components/organisms/header/header.scss';
+
 body {
   background: map-get($colors, white);
 }

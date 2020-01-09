@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
-import './button.scss'
+import './button.scss';
 
-const Button = ({ children, onclick }) => (
-  <button onClick={onclick}>{children}</button>
-)
+const Button = ({ data, children, onclick }) => {
+  const [text, setText] = useState(children)
 
-export default Button
+  useEffect(() => {
+    if (data) {
+      setText(data);
+    }
+  }, []);
+
+  return <button onClick={onclick}>{text}</button>;
+};
+
+export default Button;
