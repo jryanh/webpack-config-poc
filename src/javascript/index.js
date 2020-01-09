@@ -1,16 +1,15 @@
 import React, { useState, Suspense } from 'react';
 import ReactDOM from 'react-dom';
 
-const PDP = React.lazy(() => import('../components/pages/detail/Detail.jsx'));
+/* const PDP = React.lazy(() => import('../components/pages/detail/Detail.jsx'));
 const PLP = React.lazy(() => import('../components/pages/listing/Listing.jsx'));
+import Button from '../components/atoms/button/Button.jsx'*/
 
 import initiateComponents from './initiateComponents';
 
-import '../stylesheets/main.scss';
-
 initiateComponents();
 
-const App = () => {
+/* const App = () => {
   const [showPLP, setShowPLP] = useState(false);
   const [showPDP, setShowPDP] = useState(false);
 
@@ -25,8 +24,8 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={loadPDP}>Load PDP</button>
-      <button onClick={loadPLP}>Load PLP</button>
+      <Button onClick={loadPDP}>Load PDP</Button>
+      <Button onClick={loadPLP}>Load PLP</Button>
       {showPLP && (
         <Suspense fallback={<div>Loading...</div>}>
           <PDP />
@@ -43,4 +42,4 @@ const App = () => {
 
 if (document.querySelector('#root')) {
   ReactDOM.render(<App />, document.querySelector('#root'));
-}
+} */

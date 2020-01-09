@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './button.scss';
 
-const Button = ({ data, children, onclick }) => {
+const Button = ({ data, children, onClick }) => {
   const [text, setText] = useState(children)
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const Button = ({ data, children, onclick }) => {
     }
   }, []);
 
-  return <button onClick={onclick}>{text}</button>;
+  return <button onClick={onClick}>{text}</button>;
 };
 
 export default Button;

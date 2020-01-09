@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{10:function(e,n,r){"use strict";r.r(n);var t=r(0),a=r.n(t);n.default=function(e){var n=e.target,r=e.children;return a.a.createElement("a",{href:n},r)}}}]);

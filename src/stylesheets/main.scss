@@ -2,6 +2,11 @@
 
 @import '../components/organisms/header/header.scss';
 
+@import '../components/atoms/button/button.scss';
+@import '../components/atoms/headline/headline.scss';
+@import '../components/atoms/image/image.scss';
+@import '../components/atoms/link/link.scss';
+
 body {
   background: map-get($colors, white);
 }

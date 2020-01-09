@@ -8,6 +8,8 @@ const Header = React.lazy(() =>
 
 const getAtomic = str => {
   switch (str) {
+    case 'p':
+      return 'pages';
     case 'o':
       return 'organisms';
     case 'm':

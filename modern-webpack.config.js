@@ -8,16 +8,15 @@ const sass = require('node-sass');
 module.exports = {
   entry: {
     main: './src/javascript/index.js',
-    cdn: './src/javascript/cdn.js'
+    cdn: './src/javascript/cdn.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'javascripts/[name].js'
   },
   optimization: {},
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/static/index.html' }),
-    new MiniCssExtractPlugin({ filename: 'stylesheet-new/[name].css' }),
+    new MiniCssExtractPlugin(),
     new CopyPlugin([{ from: 'src/static', to: '' }]),
     new CopyPlugin([
       {

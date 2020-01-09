@@ -2,7 +2,7 @@
   "name": "webpack-config-poc",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --config legacy-webpack.config.js & webpack --config modern-webpack.config.js"
   },
   "repository": "https://github.com/jryanh/webpack-config-poc.git",
   "author": "Joseph Haas <jrh.ger@gmail.com>",
