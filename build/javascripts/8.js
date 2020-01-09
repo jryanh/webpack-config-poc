@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{15:function(e,t,n){"use strict";n.r(t);var i=n(0),a=n.n(i);n(23);t.default=function(e){return a.a.createElement("div",{className:"image",style:{width:e.width,height:e.height}})}},23:function(e,t,n){}}]);

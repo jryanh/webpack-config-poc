@@ -1,13 +1,13 @@
-import React, { useState, Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState, Suspense } from 'react'
+import ReactDOM from 'react-dom'
 
 /* const PDP = React.lazy(() => import('../components/pages/detail/Detail.jsx'));
 const PLP = React.lazy(() => import('../components/pages/listing/Listing.jsx'));
 import Button from '../components/atoms/button/Button.jsx'*/
 
-import initiateComponents from './initiateComponents';
+import initiateComponents from './initiateComponents'
 
-initiateComponents();
+initiateComponents()
 
 /* const App = () => {
   const [showPLP, setShowPLP] = useState(false);

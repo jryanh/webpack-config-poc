@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" media="all" href="./stylesheets/main.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      href="./stylesheets/main.css"
+    />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +14,36 @@
     <title>Legacy</title>
   </head>
   <body>
+    <div
+      data-js-module="o-header"
+      data-js-config='[{"url": "/","name":"Home"}]'
+    ></div>
+    <main>
+      <h1>Das ist eine Legacy Seite</h1>
+      <p>
+        Lorem eu consequat labore laborum velit enim tempor in id sunt occaecat.
+        Ut deserunt tempor aliquip qui aliquip magna occaecat excepteur proident
+        aliquip. Irure sint magna mollit cupidatat minim mollit consectetur
+        cillum Lorem velit aliqua nisi excepteur. Enim reprehenderit adipisicing
+        amet aute labore reprehenderit cillum dolore sit velit ullamco. Ut
+        aliqua ea ad incididunt qui ipsum fugiat cupidatat consequat ut minim
+        reprehenderit. Aliqua occaecat elit duis est ut quis. Voluptate
+        cupidatat sit ad ut nisi elit qui irure Lorem aliquip.
+      </p>
+      <div
+        data-js-module="a-button"
+        data-js-config="Click me for more info"
+      ></div>
+      <hr />
+      <div data-js-module="a-teaser"></div>
+    </main>
 
-    <div data-js-module="o-header" data-js-config="[{&quot;url&quot;: &quot;/&quot;,&quot;name&quot;:&quot;Home&quot;}]"></div>
-    <div data-js-module="a-button" data-js-config="Test"></div>
-    <div data-js-module="a-teaser"></div>
-    <div data-js-module="o-footer"></div>
+    <footer>
+      <div data-js-module="o-footer"></div>
+    </footer>
 
     <script type="text/javascript" src="./javascripts/common.js"></script>
     <script type="text/javascript" src="./javascripts/main.js"></script>
+    <script type="text/javascript" src="./javascripts/vendors~main.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 
 import Link from '../../atoms/link/Link.jsx'
 
@@ -6,16 +6,25 @@ import './header.scss'
 
 const Header = props => {
   const [navItems, setNavItems] = useState([
-    { url: 'file:///Users/A15EB4C/Projects/webpack-config-poc/dist/index.html', name: 'Home' },
-    { url: 'file:///Users/A15EB4C/Projects/webpack-config-poc/dist/pdp.html', name: 'PDP' },
-    { url: 'file:///Users/A15EB4C/Projects/webpack-config-poc/dist/plp.html', name: 'PLP' }
-  ]);
+    {
+      url: 'file:///Users/Joey/Projects/webpack-config-poc/dist/index.html',
+      name: 'Home'
+    },
+    {
+      url: 'file:///Users/Joey/Projects/webpack-config-poc/dist/pdp.html',
+      name: 'PDP'
+    },
+    {
+      url: 'file:///Users/Joey/Projects/webpack-config-poc/dist/plp.html',
+      name: 'PLP'
+    }
+  ])
 
   useEffect(() => {
     if (props.data) {
-      setNavItems(JSON.parse(props.data));
+      setNavItems(JSON.parse(props.data))
     }
-  }, []);
+  }, [])
 
   return (
     <header>
@@ -29,7 +38,7 @@ const Header = props => {
         </ul>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
